@@ -1,1 +1,613 @@
+In [36]: x=list()
+
+In [37]: x
+Out[37]: []
+
+In [38]: flowers=['sunflower','rose','lotus','jasmine','lily']
+
+In [39]: flowers
+Out[39]: ['sunflower', 'rose', 'lotus', 'jasmine', 'lily']
+
+In [40]: type(flowers)
+Out[40]: list
+
+In [41]: id(flowers)
+Out[41]: 1818651724544
+
+In [42]: for i in flowers:
+    ...:     print(i)
+    ...:
+sunflower
+rose
+lotus
+jasmine
+lily
+
+In [43]: flowers.append('tulip')
+
+In [44]: flowers
+Out[44]: ['sunflower', 'rose', 'lotus', 'jasmine', 'lily', 'tulip']
+
+In [45]: flowers.count('lily')
+Out[45]: 1
+flowers.copy()
+Out[47]: ['sunflower', 'rose', 'lotus', 'jasmine', 'lily', 'tulip']
+
+In [48]: pops=flowers.copy()
+
+In [49]: pops
+Out[49]: ['sunflower', 'rose', 'lotus', 'jasmine', 'lily', 'tulip']
+
+In [50]: pops.clear()
+
+In [51]: flowers
+Out[51]: ['sunflower', 'rose', 'lotus', 'jasmine', 'lily', 'tulip']
+
+In [52]: flowers.index('rose')
+Out[52]: 1
+
+In [53]: flowers.index('jasmine')
+Out[53]: 3
+
+In [54]: flowers.insert(2,'daisy')
+
+In [55]: flowers
+Out[55]: ['sunflower', 'rose', 'daisy', 'lotus', 'jasmine', 'lily', 'tulip']
+
+In [56]: flowers.insert(6,'lavendar')
+
+In [57]:
+
+In [57]: flowers
+Out[57]: ['sunflower', 'rose', 'daisy', 'lotus', 'jasmine', 'lily', 'lavendar', 'tulip']
+
+In [58]: flowers.insert(8,'hibiscus')
+
+In [59]: flowers
+Out[59]:
+['sunflower',
+ 'rose',
+ 'daisy',
+ 'lotus',
+ 'jasmine',
+ 'lily',
+ 'lavendar',
+ 'tulip',
+ 'hibiscus']
+
+In [60]: flowers.pop()
+Out[60]: 'hibiscus'
+
+In [61]: flowers
+Out[61]: ['sunflower', 'rose', 'daisy', 'lotus', 'jasmine', 'lily', 'lavendar', 'tulip']
+
+In [62]: flowers.insert(8,'hibiscus')
+
+In [63]: flowers
+Out[63]:
+['sunflower',
+ 'rose',
+ 'daisy',
+ 'lotus',
+ 'jasmine',
+ 'lily',
+ 'lavendar',
+ 'tulip',
+ 'hibiscus']
+
+In [64]: flowers.remove('lily')
+
+In [65]: flowers
+Out[65]:
+['sunflower',
+ 'rose',
+ 'daisy',
+ 'lotus',
+ 'jasmine',
+ 'lavendar',
+ 'tulip',
+ 'hibiscus']
+
+In [66]: flowers.insert(5,'lily')
+
+In [67]: flowers.insert(8,'lily')
+
+In [68]: flowers
+Out[68]:
+['sunflower',
+ 'rose',
+ 'daisy',
+ 'lotus',
+ 'jasmine',
+ 'lily',
+ 'lavendar',
+ 'tulip',
+ 'lily',
+ 'hibiscus']
+
+In [69]: flowers.remove('lily')
+
+In [70]:
+
+In [70]: flowers
+Out[70]:
+['sunflower',
+ 'rose',
+ 'daisy',
+ 'lotus',
+ 'jasmine',
+ 'lavendar',
+ 'tulip',
+ 'lily',
+ 'hibiscus']
+
+In [71]: flowers.remove('lily',4)
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[71], line 1
+----> 1 flowers.remove('lily',4)
+
+TypeError: list.remove() takes exactly one argument (2 given)
+
+In [72]: flowers
+Out[72]:
+['sunflower',
+ 'rose',
+ 'daisy',
+ 'lotus',
+ 'jasmine',
+ 'lavendar',
+ 'tulip',
+ 'lily',
+ 'hibiscus']
+
+In [73]: flowers.insert(10,'lily')
+
+In [74]: flowers
+Out[74]:
+['sunflower',
+ 'rose',
+ 'daisy',
+ 'lotus',
+ 'jasmine',
+ 'lavendar',
+ 'tulip',
+ 'lily',
+ 'hibiscus',
+ 'lily']
+
+In [75]: flowers.remove('lily')
+
+In [76]: flowers
+Out[76]:
+['sunflower',
+ 'rose',
+ 'daisy',
+ 'lotus',
+ 'jasmine',
+ 'lavendar',
+ 'tulip',
+ 'hibiscus',
+ 'lily']
+
+In [77]: flowers.reverse()
+
+In [78]: flowers
+Out[78]:
+['lily',
+ 'hibiscus',
+ 'tulip',
+ 'lavendar',
+ 'jasmine',
+ 'lotus',
+ 'daisy',
+ 'rose',
+ 'sunflower']
+
+In [79]: colours=['red','purple','green']
+
+In [80]: flowers.extend('colours)
+  Cell In[80], line 1
+    flowers.extend('colours)
+                   ^
+SyntaxError: unterminated string literal (detected at line 1)
+
+
+In [81]: flowers.extend(colours)
+
+In [82]: flowers
+Out[82]:
+['lily',
+ 'hibiscus',
+ 'tulip',
+ 'lavendar',
+ 'jasmine',
+ 'lotus',
+ 'daisy',
+ 'rose',
+ 'sunflower',
+ 'red',
+ 'purple',
+ 'green']
+
+In [83]: flowers.remove('red')
+
+In [84]: flowers
+Out[84]:
+['lily',
+ 'hibiscus',
+ 'tulip',
+ 'lavendar',
+ 'jasmine',
+ 'lotus',
+ 'daisy',
+ 'rose',
+ 'sunflower',
+ 'purple',
+ 'green']
+
+In [85]: fruits=('apple','sapota')
+
+In [86]: type(fruits)
+Out[86]: tuple
+
+In [87]: flowers.extend(fruits)
+
+In [88]: flowers
+Out[88]:
+['lily',
+ 'hibiscus',
+ 'tulip',
+ 'lavendar',
+ 'jasmine',
+ 'lotus',
+ 'daisy',
+ 'rose',
+ 'sunflower',
+ 'purple',
+ 'green',
+ 'apple',
+ 'sapota']
+
+In [89]: flowers.sort?
+Signature: flowers.sort(*, key=None, reverse=False)
+Docstring:
+Sort the list in ascending order and return None.
+
+The sort is in-place (i.e. the list itself is modified) and stable (i.e. the
+order of two equal elements is maintained).
+
+If a key function is given, apply it once to each list item and sort them,
+ascending or descending, according to their function values.
+
+The reverse flag can be set to sort in descending order.
+Type:      builtin_function_or_method
+
+In [90]: flowers.sort()
+
+In [91]: flowers
+Out[91]:
+['apple',
+ 'daisy',
+ 'green',
+ 'hibiscus',
+ 'jasmine',
+ 'lavendar',
+ 'lily',
+ 'lotus',
+ 'purple',
+ 'rose',
+ 'sapota',
+ 'sunflower',
+ 'tulip']
+
+In [92]: id(flowers(apple))
+---------------------------------------------------------------------------In [94]: id(flowers)
+Out[94]: 1818651724544
+
+In [95]: id(flowers[1])
+Out[95]: 1818625534384
+
+In [96]: id(flowers[5])
+Out[96]: 1818651628208
+
+In [97]: id(flowers[12])
+Out[97]: 1818651630512
+In [100]: flowers
+Out[100]:
+['apple',
+ 'daisy',
+ 'green',
+ 'hibiscus',
+ 'jasmine',
+ 'lavendar',
+ 'lily',
+ 'lotus',
+ 'purple',
+ 'rose',
+ 'sapota',
+ 'sunflower',
+ 'tulip']
+
+In [101]: flowers.sort(reverse=True)
+
+In [102]: flowers
+Out[102]:
+['tulip',
+ 'sunflower',
+ 'sapota',
+ 'rose',
+ 'purple',
+ 'lotus',
+ 'lily',
+ 'lavendar',
+ 'jasmine',
+ 'hibiscus',
+ 'green',
+ 'daisy',
+ 'apple']
+
+In [103]: flowers.sort()
+
+In [104]: flowers
+Out[104]:
+['apple',
+ 'daisy',
+ 'green',
+ 'hibiscus',
+ 'jasmine',
+ 'lavendar',
+ 'lily',
+ 'lotus',
+ 'purple',
+ 'rose',
+ 'sapota',
+ 'sunflower',
+ 'tulip']
+
+In [105]: flowers.reverse()
+
+In [106]: flowers
+Out[106]:
+['tulip',
+ 'sunflower',
+ 'sapota',
+ 'rose',
+ 'purple',
+ 'lotus',
+ 'lily',
+ 'lavendar',
+ 'jasmine',
+ 'hibiscus',
+ 'green',
+ 'daisy',
+ 'apple']
+
+In [107]: flowers.sort(reverse=True)
+
+In [108]: flowers
+Out[108]:
+['tulip',
+ 'sunflower',
+ 'sapota',
+ 'rose',
+ 'purple',
+ 'lotus',
+ 'lily',
+ 'lavendar',
+ 'jasmine',
+ 'hibiscus',
+ 'green',
+ 'daisy',
+ 'apple']
+
+In [109]: flowers.sort(reverse=False)
+
+In [110]: flowers
+Out[110]:
+['apple',
+ 'daisy',
+ 'green',
+ 'hibiscus',
+ 'jasmine',
+ 'lavendar',
+ 'lily',
+ 'lotus',
+ 'purple',
+ 'rose',
+ 'sapota',
+ 'sunflower',
+ 'tulip']
+In [111]: for i in flowers:
+     ...:     print(i)
+     ...:
+apple
+daisy
+green
+hibiscus
+jasmine
+lavendar
+lily
+lotus
+purple
+rose
+sapota
+sunflower
+tulip
+
+In [112]: colours=('violet','yellow','green')
+
+In [113]: flowers.extend(colours)
+
+In [114]: flowers
+Out[114]:
+['apple',
+ 'daisy',
+ 'green',
+ 'hibiscus',
+ 'jasmine',
+ 'lavendar',
+ 'lily',
+ 'lotus',
+ 'purple',
+ 'rose',
+ 'sapota',
+ 'sunflower',
+ 'tulip',
+ 'violet',
+ 'yellow',
+ 'green']
+
+In [115]: id(flowers[2])
+Out[115]: 1818572850416
+
+In [116]: id(flowers[15])
+Out[116]: 1818572850416
+
+In [117]: flowers.count('green')
+Out[117]: 2
+
+In [118]: flowers.index('green',3)
+Out[118]: 15
+
+In [119]: flowers.remove('green')
+
+In [120]: flowers
+Out[120]:
+['apple',
+ 'daisy',
+ 'hibiscus',
+ 'jasmine',
+ 'lavendar',
+ 'lily',
+ 'lotus',
+ 'purple',
+ 'rose',
+ 'sapota',
+ 'sunflower',
+ 'tulip',
+ 'violet',
+ 'yellow',
+ 'green']
+
+In [121]: flowers.pop()
+Out[121]: 'green'
+
+In [122]: flowers
+Out[122]:
+['apple',
+ 'daisy',
+ 'hibiscus',
+ 'jasmine',
+ 'lavendar',
+ 'lily',
+ 'lotus',
+ 'purple',
+ 'rose',
+ 'sapota',
+ 'sunflower',
+ 'tulip',
+ 'violet',
+ 'yellow']
+In [124]: abc=['p','u','r','p','l','e','c','o','l','o','u','r']
+
+In [125]: print(abc)
+['p', 'u', 'r', 'p', 'l', 'e', 'c', 'o', 'l', 'o', 'u', 'r']
+
+In [126]: print(abc[::])
+['p', 'u', 'r', 'p', 'l', 'e', 'c', 'o', 'l', 'o', 'u', 'r']
+
+In [127]: print(abc[::2])
+['p', 'r', 'l', 'c', 'l', 'u']
+
+In [128]: print(abc[:3])
+['p', 'u', 'r']
+
+In [129]: print(abc[2:7])
+['r', 'p', 'l', 'e', 'c']
+
+In [130]: print(abc[0:5])
+['p', 'u', 'r', 'p', 'l']
+
+In [131]: print(abc[0:6])
+['p', 'u', 'r', 'p', 'l', 'e']
+
+In [132]: print(abc[0::6])
+['p', 'c']
+
+In [133]: print(abc[::6])
+['p', 'c']
+
+In [134]: print(abc[:7])
+['p', 'u', 'r', 'p', 'l', 'e', 'c']
+: a=['bee',578,9.87,'l','tom']
+
+In [140]: a
+Out[140]: ['bee', 578, 9.87, 'l', 'tom']
+
+In [141]: b=['bee',578,9.87,'l','tom']
+
+In [142]: a==b
+Out[142]: True
+
+In [143]: a.sort()
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+Cell In[143], line 1
+----> 1 a.sort()
+
+TypeError: '<' not supported between instances of 'int' and 'str'
+
+In [144]: a.reverse()
+
+In [145]: a
+Out[145]: ['tom', 'l', 9.87, 578, 'bee']
+
+In [146]: a==b
+Out[146]: False
+
+In [147]: b.reverse()
+
+In [148]: b
+Out[148]: ['tom', 'l', 9.87, 578, 'bee']
+
+In [149]: a==b
+Out[149]: True
+fun=['pruple','is']
+
+In [152]: print(fun)
+['pruple', 'is']
+
+In [154]: fun.extend(['beautiful','colour'])
+
+In [155]: print(fun)
+['pruple', 'is', 'beautiful', 'colour']
+abc=[0,2,4,6,8,10]
+
+In [164]: abc.pop()
+Out[164]: 10
+
+In [165]: abc.remove(0)
+
+In [166]: abc
+Out[166]: [2, 4, 6, 8]
+
+In [167]: abc.extend(['fun','pops','colours'])
+
+In [168]: abc
+Out[168]: [2, 4, 6, 8, 'fun', 'pops', 'colours']
+
+
+In [170]: dee=('bee','tom',4,7.5)
+
+In [171]: id(abc[2])
+Out[171]: 140703664567240
+
+In [172]: id(dee[2])
+Out[172]: 140703664567176
+
+In [173]: abc.extend(dee)
+
+In [174]: abc
+Out[174]: [2, 4, 6, 8, 'fun', 'pops', 'colours', 'bee', 'tom', 4, 7.5]
 
